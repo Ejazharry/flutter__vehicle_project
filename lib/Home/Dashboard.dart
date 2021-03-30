@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_auth_tutor/Home/create_data.dart';
 import '../profileScreen.dart';
+import 'SearchScreen.dart';
 
 class Dashboard extends StatefulWidget {
   Dashboard({Key key}) : super(key: key);
@@ -13,6 +14,7 @@ class Dashboard extends StatefulWidget {
 class _DashboardState extends State<Dashboard> {
   int _selectedIndex = 0;
   List<Widget> _widgetOptions = <Widget>[
+    CloudFirestoreSearch(),
     CreateData(),
     FirstScreen(),
   ];
@@ -50,6 +52,13 @@ class _DashboardState extends State<Dashboard> {
                     Icons.home,
                   ),
                   title: Text('Home'),
+                  // backgroundColor: Colors.green
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(
+                    Icons.add,
+                  ),
+                  title: Text('Upload'),
                   // backgroundColor: Colors.green
                 ),
                 BottomNavigationBarItem(

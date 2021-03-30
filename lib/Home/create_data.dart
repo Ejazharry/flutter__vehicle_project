@@ -63,7 +63,7 @@ class _CreateDataState extends State<CreateData> {
       DateTime now = new DateTime.now();
       DateTime date = new DateTime(now.year, now.month, now.day);
 
-        FirebaseFirestore.instance.collection("Users").add({
+        FirebaseFirestore.instance.collection("Users").doc(vNo.text).set({
         "vehicleNumber": vNo.text,
         "registrationNumber": rNo.text,
         "vehicleType": Vty.text ,
